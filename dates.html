@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    h1 {
+      font-weight: bold;
+      text-align: center;
+      font-size: 50px;
+      color: rgb(150, 45, 150);
+    }
+    h2 {
+      font-weight: bold;
+      font-family: 30px;
+      text-align: center;
+      color: blue;
+    }
+  </style>
+  <body>
+    <h1>🗺️DATES</h1>
+    <h2>Tuesday August 13 , 10:00 , 2019</h2>
+
+    <script>
+      let now = new Date();
+
+      //console.log(now.getFullYear());
+      //console.log(now.getMonth());
+      //  console.log(now.getDay());
+      // console.log(now.getDate());
+
+      let h2 = document.querySelector("h2");
+
+      let date = now.getDate();
+
+      let hour = now.getHours();
+      let minute = now.getMinutes();
+      let year = now.getFullYear();
+      //let day = now.getDay(); // There are seven values to consider when using this array
+      let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
+      let day = days[now.getDay()];
+      let months = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sept",
+        "Oct",
+        "Nov",
+        "Dev",
+      ];
+      let month = months[now.getMonth()];
+      h2.innerHTML = ` ${day} ${month} ${date}, ${hour}.${minute}, ${year}`;
+    </script>
+  </body>
+</html>
